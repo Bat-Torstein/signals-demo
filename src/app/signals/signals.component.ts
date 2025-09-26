@@ -8,7 +8,12 @@ import { interval, Subscription } from 'rxjs';
   //changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignalsComponent implements OnInit, OnDestroy {
-  @Input() items: string[] = [];
+  // moddedItems: string[] = [];
+  // @Input() set items(value: string[]) {
+  //   this.moddedItems = value.map(v => v.toUpperCase());
+  // }
+
+  @Input({required: true}) items: string[] | undefined;
 
   counter = 0;
   subscription: Subscription | undefined;
@@ -19,11 +24,11 @@ export class SignalsComponent implements OnInit, OnDestroy {
   }
 
   clicker() {
-    console.error('clicked');
+
   }
 
   ngOnInit(): void {
-    this.subscription = interval(1000).subscribe(() => this.counter++)
+    //this.subscription = interval(1000).subscribe(() => this.counter++)
   }
 
   ngOnDestroy(): void {

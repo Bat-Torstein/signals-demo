@@ -17,6 +17,6 @@ export class AppComponent implements OnInit {
       this.items.push('six');
       this.items.push('seven');
 
-    }, 5000);
+    }, 3000);
   }
 }
