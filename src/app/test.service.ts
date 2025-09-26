@@ -14,7 +14,7 @@ export class TestService {
 
   start() {
     setTimeout(() => {
-      this.mySubject.next(['1', '2', '3']);
-    });
+      this.mySubject.next(['hello', 'hello']);
+    }, 5000);
   }
 }

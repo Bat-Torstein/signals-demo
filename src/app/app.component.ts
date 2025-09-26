@@ -14,6 +14,9 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.items.push('four');
       this.items.push('five');
-    }, 1000);
+      this.items.push('six');
+      this.items.push('seven');
+
+    }, 5000);
   }
 }
